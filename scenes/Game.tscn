@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://r5sj4mdbwyd7"]
 
 [ext_resource type="PackedScene" uid="uid://u20gxiyc8gbv" path="res://scenes/Player.tscn" id="1_ibkli"]
-[ext_resource type="Shader" uid="uid://bs00102c1ec6j" path="res://shaders/Background.gdshader" id="2_cpr0p"]
 [ext_resource type="Texture2D" uid="uid://eyvooc5ljkad" path="res://assets/Background.png" id="3_78awf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
@@ -12,13 +11,6 @@ distance = -92.0
 normal = Vector2(1, 0)
 distance = -90.0
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cpr0p"]
-distance = -84.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s0nni"]
-shader = ExtResource("2_cpr0p")
-shader_parameter/scroll_speed = 0.0
-
 [node name="Game" type="Node2D" unique_id=2103538176]
 
 [node name="CharacterBody2D" parent="." unique_id=142940438 instance=ExtResource("1_ibkli")]
@@ -28,9 +20,9 @@ position = Vector2(195, -234)
 position = Vector2(-183, -148)
 offset = Vector2(0, 600)
 zoom = Vector2(0.565, 0.565)
-limit_left = -1900
+limit_left = -2036
 limit_top = -1000
-limit_right = 1950
+limit_right = 2043
 metadata/_edit_lock_ = true
 
 [node name="WorldBoundaries" type="Node" parent="." unique_id=1882253587]
@@ -49,19 +41,16 @@ position = Vector2(-1771, 0)
 position = Vector2(-57, 1)
 shape = SubResource("WorldBoundaryShape2D_qbsmt")
 
-[node name="BottomBoundary" type="StaticBody2D" parent="WorldBoundaries" unique_id=1618713601]
-position = Vector2(13, 991)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=661412022]
 
-[node name="BottomBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/BottomBoundary" unique_id=228410646]
-shape = SubResource("WorldBoundaryShape2D_cpr0p")
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1994811429]
+motion_scale = Vector2(1, 0)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1079301303]
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=977810577]
 z_index = -4000
-material = SubResource("ShaderMaterial_s0nni")
-offset_left = -1903.0
-offset_top = -403.0
-offset_right = 17.0
-offset_bottom = 677.0
-scale = Vector2(1.9962026, 1.9978604)
+texture_repeat = 2
+position = Vector2(3.0001626, 1267)
+scale = Vector2(2.2354167, 3.794444)
 texture = ExtResource("3_78awf")
-stretch_mode = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
