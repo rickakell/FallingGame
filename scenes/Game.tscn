@@ -8,35 +8,44 @@ distance = -92.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
 normal = Vector2(1, 0)
-distance = -50.0
+distance = -90.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cpr0p"]
 distance = -84.0
 
 [node name="Game" type="Node2D" unique_id=2103538176]
+position = Vector2(1931, 1083)
 
 [node name="CharacterBody2D" parent="." unique_id=142940438 instance=ExtResource("1_ibkli")]
-position = Vector2(172, 145)
+position = Vector2(121, -247)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=579652194]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=579652194]
+position = Vector2(-183, -148)
+offset = Vector2(0, 600)
+zoom = Vector2(0.5, 0.5)
+limit_left = -60
+limit_top = -100
+limit_right = 3900
+metadata/_edit_lock_ = true
 
 [node name="WorldBoundaries" type="Node" parent="." unique_id=1882253587]
 
 [node name="RightBoundary2" type="StaticBody2D" parent="WorldBoundaries" unique_id=1414834678]
-position = Vector2(873, 0)
+position = Vector2(3753, 1085)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/RightBoundary2" unique_id=1060846366]
+[node name="RightBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/RightBoundary2" unique_id=1060846366]
 position = Vector2(-4, 0)
 shape = SubResource("WorldBoundaryShape2D_ibkli")
 
 [node name="LeftBoundary" type="StaticBody2D" parent="WorldBoundaries" unique_id=528910690]
+position = Vector2(146, 1083)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/LeftBoundary" unique_id=1999551497]
-position = Vector2(-910, -2)
+[node name="LeftBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/LeftBoundary" unique_id=1999551497]
+position = Vector2(-57, 1)
 shape = SubResource("WorldBoundaryShape2D_qbsmt")
 
 [node name="BottomBoundary" type="StaticBody2D" parent="WorldBoundaries" unique_id=1618713601]
-position = Vector2(0, 458)
+position = Vector2(1930, 2074)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/BottomBoundary" unique_id=228410646]
+[node name="BottomBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/BottomBoundary" unique_id=228410646]
 shape = SubResource("WorldBoundaryShape2D_cpr0p")
