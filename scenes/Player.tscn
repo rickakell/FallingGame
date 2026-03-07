@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://u20gxiyc8gbv"]
 
 [ext_resource type="Texture2D" uid="uid://dkq71p2pqbhsc" path="res://assets/Smiley.png" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://ybgbp3sk5v4m" path="res://scripts/player.gd" id="1_v6fml"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3i3nt"]
 radius = 82.05486
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=142940438]
+[node name="Player" type="CharacterBody2D" unique_id=142940438]
+script = ExtResource("1_v6fml")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=336319985]
 texture = ExtResource("1_p0vlq")
