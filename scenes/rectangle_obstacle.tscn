@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bmivkuhjrvv1q"]
+
+[ext_resource type="Texture2D" uid="uid://b0dd7tedii0pg" path="res://assets/Rectangle.png" id="1_5wvcd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehh6y"]
+size = Vector2(189.5, 76)
+
+[node name="RectangleObstacle" type="Node2D" unique_id=339422551]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1079018570]
+position = Vector2(-0.25, 0)
+scale = Vector2(1.0026455, 1)
+texture = ExtResource("1_5wvcd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1700206140]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=33350272]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_ehh6y")
