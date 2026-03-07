@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://u20gxiyc8gbv" path="res://scenes/Player.tscn" id="1_ibkli"]
 [ext_resource type="Texture2D" uid="uid://eyvooc5ljkad" path="res://assets/Background.png" id="3_78awf"]
+[ext_resource type="PackedScene" uid="uid://bmivkuhjrvv1q" path="res://scenes/rectangle_obstacle.tscn" id="3_cpr0p"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
 normal = Vector2(-1, 0)
@@ -25,22 +26,6 @@ limit_top = -1000
 limit_right = 2043
 metadata/_edit_lock_ = true
 
-[node name="WorldBoundaries" type="Node" parent="." unique_id=1882253587]
-
-[node name="RightBoundary2" type="StaticBody2D" parent="WorldBoundaries" unique_id=1414834678]
-position = Vector2(1836, 2)
-
-[node name="RightBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/RightBoundary2" unique_id=1060846366]
-position = Vector2(-4, 0)
-shape = SubResource("WorldBoundaryShape2D_ibkli")
-
-[node name="LeftBoundary" type="StaticBody2D" parent="WorldBoundaries" unique_id=528910690]
-position = Vector2(-1771, 0)
-
-[node name="LeftBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/LeftBoundary" unique_id=1999551497]
-position = Vector2(-57, 1)
-shape = SubResource("WorldBoundaryShape2D_qbsmt")
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=661412022]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1994811429]
@@ -49,8 +34,42 @@ motion_scale = Vector2(1, 0)
 [node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=977810577]
 z_index = -4000
 texture_repeat = 2
-position = Vector2(3.0001626, 1267)
+position = Vector2(45, 1287)
 scale = Vector2(2.2354167, 3.794444)
 texture = ExtResource("3_78awf")
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="WorldBoundaries" type="Node" parent="." unique_id=1882253587]
+
+[node name="RightBoundary2" type="StaticBody2D" parent="WorldBoundaries" unique_id=1414834678]
+position = Vector2(1836, 2)
+
+[node name="RightBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/RightBoundary2" unique_id=1060846366]
+position = Vector2(38, -2)
+shape = SubResource("WorldBoundaryShape2D_ibkli")
+
+[node name="LeftBoundary" type="StaticBody2D" parent="WorldBoundaries" unique_id=528910690]
+position = Vector2(-1771, 0)
+
+[node name="LeftBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/LeftBoundary" unique_id=1999551497]
+position = Vector2(-16, -1)
+shape = SubResource("WorldBoundaryShape2D_qbsmt")
+
+[node name="RactangleObstacles" type="Node" parent="." unique_id=604775788]
+
+[node name="RectangleObstacle" parent="RactangleObstacles" unique_id=339422551 instance=ExtResource("3_cpr0p")]
+position = Vector2(193, 258)
+scale = Vector2(4.6444445, -1.25)
+
+[node name="RectangleObstacle2" parent="RactangleObstacles" unique_id=1835084678 instance=ExtResource("3_cpr0p")]
+position = Vector2(-1023.0001, 1906.9999)
+scale = Vector2(2.3041394, -1.781838)
+
+[node name="RectangleObstacle3" parent="RactangleObstacles" unique_id=818041548 instance=ExtResource("3_cpr0p")]
+position = Vector2(1168, 3050)
+scale = Vector2(5.309058, 3.1749468)
+
+[node name="RectangleObstacle4" parent="RactangleObstacles" unique_id=978107861 instance=ExtResource("3_cpr0p")]
+position = Vector2(-1149, 4263)
+scale = Vector2(9.026836, -1.6663016)
