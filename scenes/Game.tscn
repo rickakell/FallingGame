@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://r5sj4mdbwyd7"]
 
 [ext_resource type="PackedScene" uid="uid://u20gxiyc8gbv" path="res://scenes/Player.tscn" id="1_ibkli"]
+[ext_resource type="Shader" uid="uid://bs00102c1ec6j" path="res://shaders/Background.gdshader" id="2_cpr0p"]
+[ext_resource type="Texture2D" uid="uid://eyvooc5ljkad" path="res://assets/Background.png" id="3_78awf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
 normal = Vector2(-1, 0)
@@ -13,39 +15,53 @@ distance = -90.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cpr0p"]
 distance = -84.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s0nni"]
+shader = ExtResource("2_cpr0p")
+shader_parameter/scroll_speed = 0.0
+
 [node name="Game" type="Node2D" unique_id=2103538176]
-position = Vector2(1931, 1083)
 
 [node name="CharacterBody2D" parent="." unique_id=142940438 instance=ExtResource("1_ibkli")]
-position = Vector2(121, -247)
+position = Vector2(195, -234)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=579652194]
 position = Vector2(-183, -148)
 offset = Vector2(0, 600)
-zoom = Vector2(0.5, 0.5)
-limit_left = -60
-limit_top = -100
-limit_right = 3900
+zoom = Vector2(0.565, 0.565)
+limit_left = -1900
+limit_top = -1000
+limit_right = 1950
 metadata/_edit_lock_ = true
 
 [node name="WorldBoundaries" type="Node" parent="." unique_id=1882253587]
 
 [node name="RightBoundary2" type="StaticBody2D" parent="WorldBoundaries" unique_id=1414834678]
-position = Vector2(3753, 1085)
+position = Vector2(1836, 2)
 
 [node name="RightBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/RightBoundary2" unique_id=1060846366]
 position = Vector2(-4, 0)
 shape = SubResource("WorldBoundaryShape2D_ibkli")
 
 [node name="LeftBoundary" type="StaticBody2D" parent="WorldBoundaries" unique_id=528910690]
-position = Vector2(146, 1083)
+position = Vector2(-1771, 0)
 
 [node name="LeftBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/LeftBoundary" unique_id=1999551497]
 position = Vector2(-57, 1)
 shape = SubResource("WorldBoundaryShape2D_qbsmt")
 
 [node name="BottomBoundary" type="StaticBody2D" parent="WorldBoundaries" unique_id=1618713601]
-position = Vector2(1930, 2074)
+position = Vector2(13, 991)
 
 [node name="BottomBoundaryShape" type="CollisionShape2D" parent="WorldBoundaries/BottomBoundary" unique_id=228410646]
 shape = SubResource("WorldBoundaryShape2D_cpr0p")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1079301303]
+z_index = -4000
+material = SubResource("ShaderMaterial_s0nni")
+offset_left = -1903.0
+offset_top = -403.0
+offset_right = 17.0
+offset_bottom = 677.0
+scale = Vector2(1.9962026, 1.9978604)
+texture = ExtResource("3_78awf")
+stretch_mode = 1
