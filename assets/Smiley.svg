@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="45mm"
+   height="45mm"
+   viewBox="0 0 45 45"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="Smiley.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.9405047"
+     inkscape:cx="250.12713"
+     inkscape:cy="160.00654"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1072"
+     inkscape:window-y="154"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       inkscape:groupmode="layer"
+       id="layer3"
+       inkscape:label="Layer 3"
+       style="display:none">
+      <rect
+         style="fill:#ff8080;fill-opacity:1;stroke-width:0.264583"
+         id="rect13"
+         width="45"
+         height="45"
+         x="0"
+         y="0" />
+    </g>
+    <circle
+       style="fill:#fac600;fill-opacity:1;stroke-width:0.259906"
+       id="path2"
+       cy="22.5"
+       cx="22.5"
+       r="22.5" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke-width:0.144254"
+       id="path6"
+       sodipodi:type="arc"
+       sodipodi:cx="22.32774"
+       sodipodi:cy="25.230324"
+       sodipodi:rx="15.512732"
+       sodipodi:ry="13.147371"
+       sodipodi:start="0"
+       sodipodi:end="3.1487882"
+       sodipodi:arc-type="slice"
+       d="m 37.840471,25.230324 a 15.512732,13.147371 0 0 1 -7.78861,11.401692 15.512732,13.147371 0 0 1 -15.544843,-0.0474 15.512732,13.147371 0 0 1 -7.6916082,-11.448894 l 15.5123302,0.0946 z" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       id="path12"
+       cx="12.481364"
+       cy="12.481364"
+       r="2.4813643" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       id="path12-8"
+       cx="30.902361"
+       cy="12.481364"
+       r="2.4813643" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <ellipse
+       style="fill:#fac600;fill-opacity:1;stroke-width:0.259906"
+       id="path2-1"
+       cy="25.887077"
+       cx="22.593708"
+       rx="11.342618"
+       ry="8.2833357" />
+  </g>
+</svg>
