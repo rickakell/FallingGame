@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsqw6kuqpnvwq"
-path="res://.godot/imported/BoundaryRectangle.svg-950862aa47a6984f52f5159760e23e35.ctex"
+uid="uid://c60ar7egvuepr"
+path="res://.godot/imported/Background.svg-ff96d5af998babca4174ae7338dee85a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BoundaryRectangle.svg"
-dest_files=["res://.godot/imported/BoundaryRectangle.svg-950862aa47a6984f52f5159760e23e35.ctex"]
+source_file="res://asset_raws/Background.svg"
+dest_files=["res://.godot/imported/Background.svg-ff96d5af998babca4174ae7338dee85a.ctex"]
 
 [params]
 

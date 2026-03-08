@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4c7x5tqf36nn"
-path="res://.godot/imported/BlackRectangle.svg-cd14fa5fced1a8a490ffe46c8d28006d.ctex"
+uid="uid://dscuri8q7ldrq"
+path="res://.godot/imported/Smiley.svg-2c85b1a7f04a9ad4c27b6b4452fef881.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BlackRectangle.svg"
-dest_files=["res://.godot/imported/BlackRectangle.svg-cd14fa5fced1a8a490ffe46c8d28006d.ctex"]
+source_file="res://asset_raws/Smiley.svg"
+dest_files=["res://.godot/imported/Smiley.svg-2c85b1a7f04a9ad4c27b6b4452fef881.ctex"]
 
 [params]
 
