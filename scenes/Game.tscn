@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://r5sj4mdbwyd7"]
 
+[ext_resource type="Script" uid="uid://bpfffugtkblm8" path="res://scripts/game_manager.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://u20gxiyc8gbv" path="res://scenes/Player.tscn" id="1_ibkli"]
 [ext_resource type="Texture2D" uid="uid://eyvooc5ljkad" path="res://assets/Background.png" id="3_78awf"]
 [ext_resource type="PackedScene" uid="uid://bmivkuhjrvv1q" path="res://scenes/rectangle_obstacle.tscn" id="3_cpr0p"]
@@ -14,10 +15,30 @@ distance = -90.0
 
 [node name="Game" type="Node2D" unique_id=2103538176]
 
-[node name="CharacterBody2D" parent="." unique_id=142940438 instance=ExtResource("1_ibkli")]
+[node name="GameManager" type="Node" parent="." unique_id=469159075]
+unique_name_in_owner = true
+script = ExtResource("1_78awf")
+
+[node name="HUD" type="CanvasLayer" parent="GameManager" unique_id=1912044806]
+layer = 50
+
+[node name="MaxDistance" type="Label" parent="GameManager/HUD" unique_id=934225823]
+z_index = 10
+offset_left = 1575.0
+offset_top = 988.0
+offset_right = 1647.0
+offset_bottom = 1011.0
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Distance:"
+
+[node name="Player" parent="." unique_id=142940438 instance=ExtResource("1_ibkli")]
+unique_name_in_owner = true
 position = Vector2(195, -234)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=579652194]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=579652194]
 position = Vector2(-183, -148)
 offset = Vector2(0, 600)
 zoom = Vector2(0.565, 0.565)

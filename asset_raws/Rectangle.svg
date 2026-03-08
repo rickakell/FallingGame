@@ -27,8 +27,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.0396254"
-     inkscape:cx="396.77752"
-     inkscape:cy="253.45667"
+     inkscape:cx="396.77753"
+     inkscape:cy="253.45668"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="1072"
@@ -42,7 +42,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#1a1a1a;stroke-width:0.180975"
+       style="fill:#000000;stroke-width:0.180975;fill-opacity:1"
        id="rect1"
        width="50"
        height="20"
