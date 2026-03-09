@@ -410,7 +410,7 @@ scale = Vector2(19.6158, 1.7199609)
 
 [node name="RectangleObstacle53" parent="RactangleObstacles" unique_id=2093741724 instance=ExtResource("3_cpr0p")]
 position = Vector2(667, 89296)
-scale = Vector2(2.840001, 1)
+scale = Vector2(2.840001, 3.1198437)
 
 [node name="RectangleObstacle54" parent="RactangleObstacles" unique_id=102887345 instance=ExtResource("3_cpr0p")]
 position = Vector2(1378, 89133.01)
@@ -423,7 +423,7 @@ rotation = -1.19261
 scale = Vector2(8.691993, 3.146914)
 
 [node name="RectangleObstacle56" parent="RactangleObstacles" unique_id=769774519 instance=ExtResource("3_cpr0p")]
-position = Vector2(-719, 98989)
+position = Vector2(-525, 99417)
 scale = Vector2(4.760003, 2.6800194)
 
 [node name="RectangleObstacle57" parent="RactangleObstacles" unique_id=208260265 instance=ExtResource("3_cpr0p")]
@@ -504,9 +504,9 @@ rotation = 1.3295265
 scale = Vector2(7.6553392, 5.9902425)
 
 [node name="RectangleObstacle74" parent="RactangleObstacles" unique_id=398166929 instance=ExtResource("3_cpr0p")]
-position = Vector2(295.004, 119482)
+position = Vector2(227.99777, 119620.99)
 rotation = 1.3295265
-scale = Vector2(6.44, 0.80578136)
+scale = Vector2(7.15334, 1.514869)
 
 [node name="RectangleObstacle75" parent="RactangleObstacles" unique_id=388511292 instance=ExtResource("3_cpr0p")]
 position = Vector2(-1606.9998, 117162.99)
@@ -525,7 +525,7 @@ scale = Vector2(7.976041, -3.3501694)
 
 [node name="RectangleObstacle78" parent="RactangleObstacles" unique_id=271397845 instance=ExtResource("3_cpr0p")]
 position = Vector2(-895, 119010)
-scale = Vector2(-5.2400007, 1)
+scale = Vector2(-5.8204203, 1.88)
 
 [node name="RectangleObstacle79" parent="RactangleObstacles" unique_id=1056420722 instance=ExtResource("3_cpr0p")]
 position = Vector2(1050.0038, 122107)
@@ -554,7 +554,7 @@ scale = Vector2(8.439076, -4.638163)
 
 [node name="RectangleObstacle84" parent="RactangleObstacles" unique_id=656968890 instance=ExtResource("3_cpr0p")]
 position = Vector2(1452, 119981)
-scale = Vector2(7.2223535, 1)
+scale = Vector2(8.022352, 1.88)
 
 [node name="RectangleObstacle85" parent="RactangleObstacles" unique_id=478120212 instance=ExtResource("3_cpr0p")]
 position = Vector2(267.00378, 133065.02)
@@ -701,5 +701,25 @@ scale = Vector2(0.12376233, 0.78144073)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine/Area2D2" unique_id=2129468542]
 position = Vector2(-1, 0)
 shape = SubResource("WorldBoundaryShape2D_s0nni")
+
+[node name="RectangleObstacle" parent="." unique_id=451933145 instance=ExtResource("3_cpr0p")]
+position = Vector2(1469.9998, 101345.99)
+scale = Vector2(6.081039, 1.8680909)
+
+[node name="RectangleObstacle2" parent="." unique_id=1650734127 instance=ExtResource("3_cpr0p")]
+position = Vector2(-1843, 107666)
+scale = Vector2(13.743638, -3.9155147)
+
+[node name="RectangleObstacle3" parent="." unique_id=1252816972 instance=ExtResource("3_cpr0p")]
+position = Vector2(-1648, 131678)
+scale = Vector2(7.3999977, 2.5198436)
+
+[node name="RectangleObstacle4" parent="." unique_id=834905035 instance=ExtResource("3_cpr0p")]
+position = Vector2(1532, 84333)
+scale = Vector2(6.2109795, 2.3003175)
+
+[node name="RectangleObstacle5" parent="." unique_id=1243703731 instance=ExtResource("3_cpr0p")]
+position = Vector2(-1325, 97682)
+scale = Vector2(8.693279, 2.0219562)
 
 [connection signal="pressed" from="GameManager/EndScreen/RestartButton" to="GameManager" method="_on_restart_button_pressed"]
