@@ -24,15 +24,51 @@ layer = 50
 
 [node name="MaxDistance" type="Label" parent="GameManager/HUD" unique_id=934225823]
 z_index = 10
-offset_left = 1575.0
-offset_top = 988.0
-offset_right = 1647.0
-offset_bottom = 1011.0
+offset_left = 1653.0
+offset_top = 937.0
+offset_right = 1725.0
+offset_bottom = 960.0
 scale = Vector2(2.1889791, 2.1889791)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 4
 text = "Distance:"
+
+[node name="Speed" type="Label" parent="GameManager/HUD" unique_id=1131414472]
+z_index = 10
+offset_left = 1696.0001
+offset_top = 879.0
+offset_right = 1768.0001
+offset_bottom = 902.0
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Speed:"
+
+[node name="Time" type="Label" parent="GameManager/HUD" unique_id=2128856870]
+z_index = 10
+offset_left = 1716.0001
+offset_top = 825.00006
+offset_right = 1788.0001
+offset_bottom = 848.00006
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Time:"
+
+[node name="Collisions" type="Label" parent="GameManager/HUD" unique_id=283101380]
+z_index = 10
+offset_left = 1639.0001
+offset_top = 995.0
+offset_right = 1721.0001
+offset_bottom = 1018.0
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Collisions: "
 
 [node name="Player" parent="." unique_id=142940438 instance=ExtResource("1_ibkli")]
 unique_name_in_owner = true
@@ -230,11 +266,11 @@ position = Vector2(-679, 68981)
 scale = Vector2(1.64, 1)
 
 [node name="RectangleObstacle38" parent="RactangleObstacles" unique_id=1628476804 instance=ExtResource("3_cpr0p")]
-position = Vector2(-373, 64756)
-scale = Vector2(0.26279247, 45.825275)
+position = Vector2(-433, 64756.004)
+scale = Vector2(0.902794, 45.825275)
 
 [node name="RectangleObstacle39" parent="RactangleObstacles" unique_id=1015489885 instance=ExtResource("3_cpr0p")]
-position = Vector2(323, 64790)
+position = Vector2(465.00003, 64790)
 scale = Vector2(-0.5112006, 39.316067)
 
 [node name="RectangleObstacle40" parent="RactangleObstacles" unique_id=1400540542 instance=ExtResource("3_cpr0p")]
