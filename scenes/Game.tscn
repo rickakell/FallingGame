@@ -74,6 +74,7 @@ theme_override_constants/outline_size = 4
 text = "Collisions: "
 
 [node name="EndScreen" type="CanvasLayer" parent="GameManager" unique_id=1729925137]
+visible = false
 
 [node name="RestartButton" type="Button" parent="GameManager/EndScreen" unique_id=274559585]
 z_index = 1000
@@ -704,6 +705,26 @@ scale = Vector2(9.6, 2.48)
 position = Vector2(2140, 31319)
 scale = Vector2(-5.1808305, 1.7657028)
 
+[node name="RectangleObstacle118" parent="RactangleObstacles" unique_id=451933145 instance=ExtResource("3_cpr0p")]
+position = Vector2(1469.9998, 101345.99)
+scale = Vector2(6.081039, 1.8680909)
+
+[node name="RectangleObstacle119" parent="RactangleObstacles" unique_id=1650734127 instance=ExtResource("3_cpr0p")]
+position = Vector2(-1843, 107666)
+scale = Vector2(13.743638, -3.9155147)
+
+[node name="RectangleObstacle120" parent="RactangleObstacles" unique_id=1252816972 instance=ExtResource("3_cpr0p")]
+position = Vector2(-1648, 131678)
+scale = Vector2(7.3999977, 2.5198436)
+
+[node name="RectangleObstacle121" parent="RactangleObstacles" unique_id=834905035 instance=ExtResource("3_cpr0p")]
+position = Vector2(1532, 84333)
+scale = Vector2(6.2109795, 2.3003175)
+
+[node name="RectangleObstacle122" parent="RactangleObstacles" unique_id=1243703731 instance=ExtResource("3_cpr0p")]
+position = Vector2(-1325, 97682)
+scale = Vector2(8.693279, 2.0219562)
+
 [node name="FinishLine" parent="." unique_id=1475530944 instance=ExtResource("5_s0nni")]
 unique_name_in_owner = true
 position = Vector2(-1, 163014)
@@ -716,25 +737,5 @@ scale = Vector2(0.12376233, 0.78144073)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine/Area2D2" unique_id=2129468542]
 position = Vector2(-1, 0)
 shape = SubResource("WorldBoundaryShape2D_s0nni")
-
-[node name="RectangleObstacle" parent="." unique_id=451933145 instance=ExtResource("3_cpr0p")]
-position = Vector2(1469.9998, 101345.99)
-scale = Vector2(6.081039, 1.8680909)
-
-[node name="RectangleObstacle2" parent="." unique_id=1650734127 instance=ExtResource("3_cpr0p")]
-position = Vector2(-1843, 107666)
-scale = Vector2(13.743638, -3.9155147)
-
-[node name="RectangleObstacle3" parent="." unique_id=1252816972 instance=ExtResource("3_cpr0p")]
-position = Vector2(-1648, 131678)
-scale = Vector2(7.3999977, 2.5198436)
-
-[node name="RectangleObstacle4" parent="." unique_id=834905035 instance=ExtResource("3_cpr0p")]
-position = Vector2(1532, 84333)
-scale = Vector2(6.2109795, 2.3003175)
-
-[node name="RectangleObstacle5" parent="." unique_id=1243703731 instance=ExtResource("3_cpr0p")]
-position = Vector2(-1325, 97682)
-scale = Vector2(8.693279, 2.0219562)
 
 [connection signal="pressed" from="GameManager/EndScreen/RestartButton" to="GameManager" method="_on_restart_button_pressed"]
