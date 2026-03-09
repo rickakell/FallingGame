@@ -30,3 +30,6 @@ func _physics_process(delta: float) -> void:
 			can_collide = false;
 			get_tree().create_timer(1).timeout.connect(func(): can_collide = true)
 			collisions += 1
+
+func reset_player() -> void:
+	collisions = 0
