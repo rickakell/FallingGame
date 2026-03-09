@@ -48,6 +48,9 @@ func _process(delta: float) -> void:
 				fastest_time = min(game_completion_time, fastest_time)
 				least_collisions = min(game_end_collisions, least_collisions)
 			
+			$EndScreen/LeastCollisions.text = "Least Collisions: " + str(least_collisions)
+			$EndScreen/FastestTime.text = "Fastest Time: " + str(fastest_time)
+			
 			$HUD.visible = false
 			$EndScreen/CompletionTime.text = "Completion Time: " + str(game_completion_time)
 			$EndScreen/TotalCollisions.text = "Total Collisions: " + str(game_end_collisions)
