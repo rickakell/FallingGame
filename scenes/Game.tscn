@@ -738,4 +738,17 @@ scale = Vector2(0.12376233, 0.78144073)
 position = Vector2(-1, 0)
 shape = SubResource("WorldBoundaryShape2D_s0nni")
 
+[node name="Instructions" type="Label" parent="." unique_id=1724402782]
+z_index = 10
+offset_left = -1396.0
+offset_top = 399.00003
+offset_right = -949.0
+offset_bottom = 433.00003
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "Use Left and Right Arrow Keys to Move"
+
 [connection signal="pressed" from="GameManager/EndScreen/RestartButton" to="GameManager" method="_on_restart_button_pressed"]
