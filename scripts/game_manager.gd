@@ -1,5 +1,7 @@
 extends Node
 
+const INT64_MAX = (1 << 63) - 1
+
 static var max_distance = 0
 static var current_distance = 0
 static var speed = 0
@@ -11,10 +13,11 @@ static var game_completion_time = 0
 static var game_end_collisions = 0
 
 static var game_complete = false
+static var new_record = false
 
 # Do not reset
-static var fastest_time = 0
-static var least_collisions = 0
+static var fastest_time = INT64_MAX
+static var least_collisions = INT64_MAX
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -39,10 +42,17 @@ func _process(delta: float) -> void:
 			game_complete = true
 			game_completion_time = game_time
 			game_end_collisions = %Player.collisions
+			
+			if (game_completion_time < fastest_time or game_end_collisions < least_collisions):
+				$EndScreen/NewRecord.visible = true
+				fastest_time = min(game_completion_time, fastest_time)
+				least_collisions = min(game_end_collisions, least_collisions)
+			
 			$HUD.visible = false
 			$EndScreen/CompletionTime.text = "Completion Time: " + str(game_completion_time)
 			$EndScreen/TotalCollisions.text = "Total Collisions: " + str(game_end_collisions)
 			$EndScreen.visible = true
+			
 
 func _on_restart_button_pressed() -> void:
 	reset_game_variables()
@@ -63,3 +73,5 @@ func reset_game_variables() -> void:
 	game_end_collisions = 0
 
 	game_complete = false
+	
+	$EndScreen/NewRecord.visible = false

@@ -88,9 +88,9 @@ text = "Restart"
 [node name="CompletionTime" type="Label" parent="GameManager/EndScreen" unique_id=1328536944]
 z_index = 10
 offset_left = 699.0
-offset_top = 647.0
+offset_top = 366.0
 offset_right = 840.0
-offset_bottom = 670.0
+offset_bottom = 389.0
 scale = Vector2(2.1889791, 2.1889791)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -100,14 +100,52 @@ text = "Completion Time: "
 [node name="TotalCollisions" type="Label" parent="GameManager/EndScreen" unique_id=2100786093]
 z_index = 10
 offset_left = 734.00006
-offset_top = 700.0
+offset_top = 419.0
 offset_right = 859.00006
-offset_bottom = 723.0
+offset_bottom = 442.0
 scale = Vector2(2.1889791, 2.1889791)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 4
 text = "Total Collisions: "
+
+[node name="FastestTime" type="Label" parent="GameManager/EndScreen" unique_id=519699192]
+z_index = 10
+offset_left = 765.0
+offset_top = 656.0
+offset_right = 906.0
+offset_bottom = 679.0
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Fastest Time: "
+
+[node name="LeastCollisions" type="Label" parent="GameManager/EndScreen" unique_id=847446872]
+z_index = 10
+offset_left = 720.0
+offset_top = 705.0
+offset_right = 845.0
+offset_bottom = 728.0
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Least Collisions:"
+
+[node name="NewRecord" type="Label" parent="GameManager/EndScreen" unique_id=474267504]
+visible = false
+z_index = 10
+offset_left = 819.0
+offset_top = 255.00003
+offset_right = 983.0
+offset_bottom = 289.00003
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "NEW RECORD!"
 
 [node name="Player" parent="." unique_id=142940438 instance=ExtResource("1_ibkli")]
 unique_name_in_owner = true
