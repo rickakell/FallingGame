@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crnmuamk86yit"]
 
-[ext_resource type="Texture2D" uid="uid://b0dd7tedii0pg" path="res://assets/Rectangle.png" id="1_ojfi3"]
+[ext_resource type="Texture2D" uid="uid://dfv7qmfusx3sb" path="res://assets/Finish.png" id="1_ojfi3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_05ejo"]
 distance = 82.0
@@ -10,6 +10,7 @@ distance = 82.0
 [node name="FinishLine" type="Node2D" unique_id=1475530944]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=544377018]
+z_index = -1
 scale = Vector2(2.712665, -2.1939385)
 texture = ExtResource("1_ojfi3")
 
