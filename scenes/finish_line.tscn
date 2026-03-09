@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://crnmuamk86yit"]
+
+[ext_resource type="Texture2D" uid="uid://b0dd7tedii0pg" path="res://assets/Rectangle.png" id="1_ojfi3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_05ejo"]
+distance = 82.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojfi3"]
+
+[node name="FinishLine" type="Node2D" unique_id=1475530944]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=544377018]
+scale = Vector2(2.712665, -2.1939385)
+texture = ExtResource("1_ojfi3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1489201892]
+
+[node name="Boundary" type="CollisionShape2D" parent="Area2D" unique_id=1050169132]
+position = Vector2(-1, 0)
+shape = SubResource("WorldBoundaryShape2D_05ejo")
+
+[node name="VictoryArea" type="Area2D" parent="." unique_id=1846430602]
+
+[node name="VictoryAreaShape" type="CollisionShape2D" parent="VictoryArea" unique_id=1793849028]
+position = Vector2(0, -79)
+scale = Vector2(25.612593, -5.155626)
+shape = SubResource("RectangleShape2D_ojfi3")

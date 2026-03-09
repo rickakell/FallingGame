@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://u20gxiyc8gbv" path="res://scenes/Player.tscn" id="1_ibkli"]
 [ext_resource type="Texture2D" uid="uid://eyvooc5ljkad" path="res://assets/Background.png" id="3_78awf"]
 [ext_resource type="PackedScene" uid="uid://bmivkuhjrvv1q" path="res://scenes/rectangle_obstacle.tscn" id="3_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://crnmuamk86yit" path="res://scenes/finish_line.tscn" id="5_s0nni"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
 normal = Vector2(-1, 0)
@@ -12,6 +13,8 @@ distance = -95.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
 normal = Vector2(1, 0)
 distance = -90.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0nni"]
 
 [node name="Game" type="Node2D" unique_id=2103538176]
 
@@ -69,6 +72,42 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 4
 text = "Collisions: "
+
+[node name="EndScreen" type="CanvasLayer" parent="GameManager" unique_id=1729925137]
+visible = false
+
+[node name="RestartButton" type="Button" parent="GameManager/EndScreen" unique_id=274559585]
+z_index = 1000
+offset_left = 839.0
+offset_top = 507.0
+offset_right = 904.0
+offset_bottom = 538.0
+scale = Vector2(4.7863593, 3.351534)
+text = "Restart"
+
+[node name="CompletionTime" type="Label" parent="GameManager/EndScreen" unique_id=1328536944]
+z_index = 10
+offset_left = 699.0
+offset_top = 647.0
+offset_right = 840.0
+offset_bottom = 670.0
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Completion Time: "
+
+[node name="TotalCollisions" type="Label" parent="GameManager/EndScreen" unique_id=2100786093]
+z_index = 10
+offset_left = 734.00006
+offset_top = 700.0
+offset_right = 859.00006
+offset_bottom = 723.0
+scale = Vector2(2.1889791, 2.1889791)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+text = "Total Collisions: "
 
 [node name="Player" parent="." unique_id=142940438 instance=ExtResource("1_ibkli")]
 unique_name_in_owner = true
@@ -128,7 +167,7 @@ position = Vector2(215.99951, 14176.002)
 scale = Vector2(11.772772, -3.6874845)
 
 [node name="RectangleObstacle" parent="RactangleObstacles" unique_id=119670390 instance=ExtResource("3_cpr0p")]
-position = Vector2(193, 258)
+position = Vector2(158, 738)
 scale = Vector2(4.6444445, -1.25)
 
 [node name="RectangleObstacle2" parent="RactangleObstacles" unique_id=1835084678 instance=ExtResource("3_cpr0p")]
@@ -572,3 +611,20 @@ scale = Vector2(4.08, 1.52)
 [node name="RectangleObstacle109" parent="RactangleObstacles" unique_id=1185633048 instance=ExtResource("3_cpr0p")]
 position = Vector2(1257, 161388)
 scale = Vector2(4.08, 1.52)
+
+[node name="FinishLine" parent="." unique_id=1475530944 instance=ExtResource("5_s0nni")]
+unique_name_in_owner = true
+position = Vector2(-1, 163014)
+scale = Vector2(8.080003, 1.2796875)
+
+[node name="Area2D2" type="Area2D" parent="FinishLine" unique_id=1177711003]
+position = Vector2(0.24752462, -81.26666)
+scale = Vector2(0.12376233, 0.78144073)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine/Area2D2" unique_id=2129468542]
+position = Vector2(-1, 0)
+shape = SubResource("WorldBoundaryShape2D_s0nni")
+
+[node name="FinishLine2" parent="." unique_id=415770950 instance=ExtResource("5_s0nni")]
+unique_name_in_owner = true
+position = Vector2(191, 449)
