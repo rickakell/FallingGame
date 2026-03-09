@@ -663,8 +663,4 @@ scale = Vector2(0.12376233, 0.78144073)
 position = Vector2(-1, 0)
 shape = SubResource("WorldBoundaryShape2D_s0nni")
 
-[node name="FinishLine2" parent="." unique_id=415770950 instance=ExtResource("5_s0nni")]
-unique_name_in_owner = true
-position = Vector2(191, 449)
-
 [connection signal="pressed" from="GameManager/EndScreen/RestartButton" to="GameManager" method="_on_restart_button_pressed"]

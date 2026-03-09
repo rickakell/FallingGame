@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 	$HUD/Time.text = "Time: " + str(game_time)
 
 	if(!game_complete):
-		if %Player.get_position().y >= %FinishLine.get_position().y or %Player.get_position().y >= %FinishLine2.get_position().y:
+		if %Player.get_position().y >= %FinishLine.get_position().y:
 			game_complete = true
 			game_completion_time = game_time
 			game_end_collisions = %Player.collisions
