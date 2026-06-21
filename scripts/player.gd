@@ -9,8 +9,12 @@ const TERMINAL_VELOCITY = 2100
 
 static var collisions = 0;
 
+func _enter_tree() -> void:
+	set_multiplayer_authority(name.to_int())
+
 var can_collide = true
 func _physics_process(delta: float) -> void:
+	if !is_multiplayer_authority(): return
 	# Add the gravity.
 	if not is_on_floor() and velocity.y <= TERMINAL_VELOCITY:
 		velocity += get_gravity() * GRAVITY_MODIFIER * delta;

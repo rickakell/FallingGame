@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://eyvooc5ljkad" path="res://assets/Background.png" id="3_78awf"]
 [ext_resource type="PackedScene" uid="uid://bmivkuhjrvv1q" path="res://scenes/rectangle_obstacle.tscn" id="3_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://crnmuamk86yit" path="res://scenes/finish_line.tscn" id="5_s0nni"]
+[ext_resource type="PackedScene" uid="uid://bqvry65veya7d" path="res://scenes/high_level_ui.tscn" id="6_kiw3p"]
+[ext_resource type="Script" uid="uid://dvy2ll1go0t77" path="res://scenes/multiplayer_spawner.gd" id="7_400sg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ibkli"]
 normal = Vector2(-1, 0)
@@ -750,5 +752,13 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 24
 text = "Use Left and Right Arrow Keys to Move"
+
+[node name="HighLevelUI" parent="." unique_id=1396773650 instance=ExtResource("6_kiw3p")]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1021634689]
+_spawnable_scenes = PackedStringArray("uid://u20gxiyc8gbv")
+spawn_path = NodePath("..")
+script = ExtResource("7_400sg")
+network_player = ExtResource("1_ibkli")
 
 [connection signal="pressed" from="GameManager/EndScreen/RestartButton" to="GameManager" method="_on_restart_button_pressed"]
